@@ -1,0 +1,21 @@
+server.port: 8080
+
+spring:
+  kafka:
+    listener:
+      concurrency: 11
+    bootstrap-servers: http://localhost:9092
+    properties:
+      "spring.json.trusted.packages": "*"
+      "schema.registry.url": "http://localhost:8081"
+      "specific.avro.reader": true
+    consumer:
+      enable-auto-commit: false
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      topic: usertopic
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      topic: usertopic
