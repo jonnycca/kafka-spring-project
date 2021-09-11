@@ -1,0 +1,17 @@
+{
+  "namespace": "br.com.kafka.people.event",
+  "type": "record",
+  "name": "UserAvro",
+  "fields":[
+    {
+      "name": "name",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "lastName",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}
