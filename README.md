@@ -1,5 +1,5 @@
 # kafka-spring-project
-project created to study kafka andasavro
+project created to study kafka and avro
 
 #to climb the Kafka
 docker-compose up
