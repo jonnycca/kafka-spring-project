@@ -12,6 +12,7 @@ spring:
     consumer:
       enable-auto-commit: false
       auto-offset-reset: latest
+      group-id: user-kafka
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
       topic: usertopic
